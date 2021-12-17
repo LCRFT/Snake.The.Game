@@ -159,7 +159,13 @@ int main(int argc, char* args[])
         }
         SDL_RenderPresent(renderer);
     }
-
+    SDL_DestroyTexture(background);
+    SDL_DestroyTexture(head);
+    SDL_DestroyTexture(fruit);
+    SDL_DestroyTexture(body);
+    SDL_DestroyTexture(game_over_mes);
+    Mix_FreeMusic(gMusic);
+    gMusic = NULL;
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
